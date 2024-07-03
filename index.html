@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog about me</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: whitesmoke;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #fafafa;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    header ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    header ul li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .about img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .about p {
+      margin: 5px 0;
+    }
+
+    .techGoals {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .techGoals h2 {
+      text-align: center;
+    }
+
+    .techGoals dl {
+      margin: 20px 0;
+    }
+
+    .techGoals dt {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .techGoals dd {
+      margin-left: 20px;
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <ul>
+      <li><a id="hngLink" data-testid="hngLink" href="https://hng.tech/learn/" target="_blank">Register Now</a></li>
+      <li><a id="keyWordLink" data-testid="keywordLink" href="https://keyword.dog/" target="_blank">Link</a></li>
+      <li><a id="scrapeanywebLink" data-testid="scrapeanywebLink" href="http://scrapeanyweb.site" target="_blank">Visit Page</a></li>
+    </ul>
+  </header>
+  <main id="home">
+    <h1>The Road to Expertise: A Front-End Developer's 2-Year Journey</h1>
+    <p>Welcome to my page where you can learn about me and my Front-End Development Goals.</p>
+    <div class="about">
+      <img src="MariaSlack.jpg" data-testid="slackProfilePicture" alt="Maria">
+      <p data-testid="slackDisplayName" class="SlackUserName">Slack Name: <b>MARIA</b></p>
+      <p data-testid="slackEmail" class="slackEmail">Email: <b>Shoyemimaria77@gmail.com</b></p>
+      <p data-testid="currentTimeUTC">Current Time: <span id="utc-time"></span></p>
+      <p data-testid="currentDay">Day Of The Week: <span id="day-of-week"></span></p>
+    </div>
+
+    <div class="techGoals">
+      <h2>My Tech Goals:</h2>
+      <p>Over the next two years, I aim to transform my passion for technology into a solid foundation for a successful career. Here's my roadmap:</p>
+      <dl>
+        <dt>Master Front-End Development</dt>
+        <dd><b>HTML, CSS, and JavaScript:</b> Dive deep into these core technologies to create well-structured HTML, beautiful and responsive CSS designs, and interactive JavaScript functionalities.</dd>
+        <dd><b>Responsive Design:</b> Learn to build websites that function perfectly on any device, from desktops to smartphones.</dd>
+
+        <dt>Learn Popular Front-End Libraries and Frameworks</dt>
+        <dd><b>React.js:</b> Focus on its component-based architecture, state management, and hooks.</dd>
+        <dd><b>Other Frameworks:</b> Explore Vue.js to diversify my skills.</dd>
+
+        <dt>Develop Back-End Skills</dt>
+        <dd><b>Node.js:</b> Understand server-side applications and RESTful APIs.</dd>
+        <dd><b>Database Management:</b> Gain hands-on experience with SQL (MySQL, PostgreSQL) and NoSQL (MongoDB) databases.</dd>
+
+        <dt>Build Full-Stack Applications</dt>
+        <dd><b>Integration:</b> Work on projects combining front-end and back-end technologies.</dd>
+        <dd><b>Best Practices:</b> Implement version control, testing, and deployment for robust projects.</dd>
+
+        <dt>Collaborate on Open Source Projects</dt>
+        <dd><b>Community Engagement:</b> Contribute to open source projects to gain real-world experience and improve coding skills.</dd>
+        <dd><b>Portfolio Development:</b> Build a strong portfolio to showcase my skills to potential employers.</dd>
+
+        <dt>Gain Industry Experience</dt>
+        <dd><b>Internships/Part-Time Work:</b> Seek opportunities to apply my learning in real-world scenarios.</dd>
+        <dd><b>Networking:</b> Connect with industry professionals through meetups, hackathons, and conferences.</dd>
+
+        <dt>Stay Updated with Emerging Technologies</dt>
+        <dd><b>Continuous Learning:</b> Follow industry trends, take online courses, and read tech blogs.</dd>
+        <dd><b>New Technologies:</b> Explore WebAssembly, Progressive Web Apps (PWAs), and serverless architectures.</dd>
+
+        <dt>Develop Soft Skills</dt>
+        <dd><b>Communication:</b> Improving my communication skills will help me effectively collaborate with team members, present ideas, and articulate technical concepts clearly.</dd>
+        <dd><b>Problem-Solving:</b> Engaging in coding challenges and competitions will enhance my problem-solving abilities, a critical skill for any developer.</dd>
+      </dl>
+      <h3>Conclusion</h3>
+      <p>By dedicating myself to these comprehensive goals, I aspire to evolve into a highly skilled front-end developer, distinguished by a relentless pursuit of knowledge, extensive practical experience, and an unwavering commitment to excellence. I look forward to the dynamic and rewarding journey that lies ahead in the ever-evolving field of web development.</p>
+    </div>
+  </main>
+  <footer>
+    <a href="#home">Go to top</a>
+  </footer>
+
+  <script>
+    function updateUTCDateTime() {
+      const utcTimeElement = document.getElementById('utc-time');
+      const currentUTC = new Date();
+      const hours = currentUTC.getUTCHours().toString().padStart(2, '0');
+      const minutes = currentUTC.getUTCMinutes().toString().padStart(2, '0');
+      const seconds = currentUTC.getUTCSeconds().toString().padStart(2, '0');
+      const formattedTime = `${hours}:${minutes}:${seconds}`;
+      utcTimeElement.textContent = formattedTime;
+    }
+
+    function updateDayOfWeek() {
+      const dayOfWeekElement = document.getElementById('day-of-week');
+      const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const currentDayIndex = new Date().getDay();
+      const currentDayOfWeek = daysOfWeek[currentDayIndex];
+      dayOfWeekElement.textContent = currentDayOfWeek;
+    }
+
+    setInterval(updateUTCDateTime, 1000);
+    setInterval(updateDayOfWeek, 1000);
+
+    updateUTCDateTime();
+    updateDayOfWeek();
+  </script>
+</body>
+</html>
